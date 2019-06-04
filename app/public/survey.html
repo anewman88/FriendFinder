@@ -2,20 +2,36 @@
 <html lang="en">
 <style>
 /* Create a custom radio button */
+
+/*
 .radio-inline {
-  margin-left: 400px;
-  width: 100px;
+  margin-left: 17px; 
+  width: 75px;
 }
-.question-container label {
-  display: inline;
-  margin-left: 80px;
+*/
+
+.radio-inline {
+  text-align: center; 
+  width: 80px;
 }
-.survey-button {
-  margin-left: 340px;
-}  
-.survey-header {
-  line-height: 50%;  
-  margin-left: 400px;
+
+.button-heading {
+    text-align: center;
+    font-size: 12px;
+}
+
+.survey-list {
+    text-align: center;
+    font-size: 12px;
+}
+
+.odd-question {
+    background-color:lavender;
+    line-height: 18px;
+}
+.even-question {
+    background-color:rgb(170, 170, 173);
+    line-height: 18px;
 }
 
 </style>
@@ -31,41 +47,199 @@
 </head>
   <body>
     <div class="container">
-      <h2>Survey Questions</h2>
-      <hr />
-      <h3><strong>About You</strong></h3>
-      <h4>Name (Required)</h4>
-      <input type="text" name="" id="name" class="form-control" required />
-      <h4>Link to photo (Required)</h4>
-      <input type="text" name="" id="photo" class="form-control" required />
-      <hr />
-
-      <h5>Please select your answers on a scale where 5 = Strongly Agree and 1 = Strongly Disagree</h2>
-        <h6 class="survey-header">Strongly&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Somewhat &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Neutral &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Somewhat  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Strongly</h2>
-        <h6 class="survey-header">&nbsp&nbspAgree &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Agree &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Disagree &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Disagree</h6>
-
-      <div class="question-container">
-        <p class="question">Q1. I like to do outdoor activities</p>
-        <div class="survey-button">
-            <form>
-                <label class="radio-inline"><input type="radio" name="optradio" value=1 checked> 5 </label>
-                <label class="radio-inline"><input type="radio" name="optradio" value=2> 4 </label>
-                <label class="radio-inline"><input type="radio" name="optradio" value=3> 3 </label>
-                <label class="radio-inline"><input type="radio" name="optradio" value=4> 2 </label>
-                <label class="radio-inline"><input type="radio" name="optradio" value=5> 1 </label>
-            </form>
+        <div class="row">
+            <div class="col" style="text-align: center">
+                <h3>Tell Us About You - Survey Questions</h3>
+                <hr />
+            </div>
         </div>
+      <div class="row">
+          <div class="col-lg-3">
+              <h5>Name (Required)</h5>
+          </div>
+          <div class="col-lg-8">
+              <input type="text" name="" id="name" class="form-control" required />
+          </div>
       </div>
+      <div class="row">
+            <div class="col-lg-3">
+                <h5>Link to photo (Required)</h5>
+            </div>
+            <div class="col-lg-8">
+                    <input type="text" name="" id="photo" class="form-control" required />
+            </div>
+        </div>
+  
+      <div class="row" style="text-align: center">
+         <div class="col">
+            <hr />
+            <h5>Please select your answers on a scale where 5 = Strongly Agree and 1 = Strongly Disagree</h5>
+         </div>
+      </div>
+      <br>
 
+        <div class="row button-heading" >
+            <div class="col-lg-6"></div>
+            <div class="col-lg-1">Strongly</div>
+            <div class="col-lg-1">Somewhat</div>
+            <div class="col-lg-1">Neutral</div>
+            <div class="col-lg-1">Somewhat</div>
+            <div class="col-lg-1">Strongly</div>
+        </div>
 
+        <div class="row button-heading">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-1">Agree</div>
+            <div class="col-lg-1">Agree</div>
+            <div class="col-lg-1"> </div>
+            <div class="col-lg-1">Disagree</div>
+            <div class="col-lg-1">Disagree</div>
+        </div>
+
+     <!-- Question List-->
+                    
+        <div class="row odd-question">
+            <div class="col-lg-6" >
+                <p class="question">Q1. I like to do outdoor activities</p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q1">
+                    <label class="radio-inline"><input type="radio" name="q1" value=5> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q1" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q1" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q1" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q1" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row even-question">
+            <div class="col-lg-6" >
+                <p class="question">Q2. I like to go to parties</p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q2">
+                    <label class="radio-inline"><input type="radio" name="q2" value=5> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q2" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q2" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q2" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q2" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row odd-question">
+            <div class="col-lg-6" >
+                <p class="question">Q3. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q3">
+                    <label class="radio-inline"><input type="radio" name="q3" value=5> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q3" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q3" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q3" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q3" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row even-question">
+            <div class="col-lg-6" >
+                <p class="question">Q4. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q4">
+                    <label class="radio-inline"><input type="radio" name="q4" value=5> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q4" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q4" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q4" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q4" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row odd-question">
+            <div class="col-lg-6" >
+                <p class="question">Q5. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q5">
+                    <label class="radio-inline"><input type="radio" name="q5" value=5> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q5" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q5" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q5" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q5" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row even-question">
+            <div class="col-lg-6" >
+                <p class="question">Q6. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q6">
+                    <label class="radio-inline"><input type="radio" name="q6" value=5 checked> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q6" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q6" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q6" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q6" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row odd-question">
+            <div class="col-lg-6" >
+                <p class="question">Q7. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q7">
+                    <label class="radio-inline"><input type="radio" name="q7" value=5 checked> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q7" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q7" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q7" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q7" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row even-question">
+            <div class="col-lg-6" >
+                <p class="question">Q8. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q8">
+                    <label class="radio-inline"><input type="radio" name="q8" value=5 checked> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q8" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q8" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q8" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q8" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
+        <div class="row odd-question">
+                <div class="col-lg-6" >
+                    <p class="question">Q9. </p>
+                </div>
+                <div class="col-lg-6" >    
+                    <form class="chosen-select" id="q9">
+                        <label class="radio-inline"><input type="radio" name="q9" value=5 checked> 5 </label>
+                        <label class="radio-inline"><input type="radio" name="q9" value=4> 4 </label>
+                        <label class="radio-inline"><input type="radio" name="q9" value=3> 3 </label>
+                        <label class="radio-inline"><input type="radio" name="q9" value=2> 2 </label>
+                        <label class="radio-inline"><input type="radio" name="q9" value=1> 1 </label>
+                    </form>
+                </div>
+        </div>
+        <div class="row even-question">
+            <div class="col-lg-6" >
+                <p class="question">Q10. </p>
+            </div>
+            <div class="col-lg-6" >    
+                <form class="chosen-select" id="q10">
+                    <label class="radio-inline"><input type="radio" name="q10" value=5 checked> 5 </label>
+                    <label class="radio-inline"><input type="radio" name="q10" value=4> 4 </label>
+                    <label class="radio-inline"><input type="radio" name="q10" value=3> 3 </label>
+                    <label class="radio-inline"><input type="radio" name="q10" value=2> 2 </label>
+                    <label class="radio-inline"><input type="radio" name="q10" value=1> 1 </label>
+                </form>
+            </div>
+        </div>
       <br />
-      <br />
-      <button
-        type="submit"
-        class="btn btn-primary btn-lg btn-block"
-        id="submit"
-      >
+      <button type="submit" class="btn btn-primary" id="submit">
         <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
       </button>
       <br />
@@ -81,6 +255,7 @@
         </div>
       </footer>
     </div>
+
     <div id="resultsModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -109,14 +284,40 @@
     </div>
 
     <script type="text/javascript">
-      $("#submit").on("click", function() {
+      var debugON = true;
+
+      $("#submit").on("click", function() {         
         function validateForm() {
+        if (debugON) {
+            console.log ("In validateForm()");
+            
+            var userData = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: [
+              $("input[name='q1']:checked").val(),
+              $("input[name='q2']:checked").val(),
+              $("input[name='q3']:checked").val(),
+              $("input[name='q4']:checked").val(),
+              $("input[name='q5']:checked").val(),
+              $("input[name='q6']:checked").val(),
+              $("input[name='q7']:checked").val(),
+              $("input[name='q8']:checked").val(),
+              $("input[name='q9']:checked").val(),
+              $("input[name='q10']:checked").val()
+            ]
+          };
+          console.log ("Input User Data ", userData);
+        }
+               
           var isValid = true;
           $(".form-control").each(function() {
             if ($(this).val() === "") isValid = false;
+            if (debugON) console.log ("name or photo is invalid");
           });
           $(".chosen-select").each(function() {
             if ($(this).val() === "") isValid = false;
+            if (debugON) console.log ("survey question invalid");
           });
           return isValid;
         }
@@ -137,17 +338,22 @@
               $("#q10").val()
             ]
           };
+          if (debugON) console.log ("Input User Data ", userData);
+ /*         
           var currentURL = window.location.origin;
           $.post(currentURL + "/api/friends", userData, function(data) {
             $("#matchName").text(data.name);
             $("#matchImg").attr("src", data.photo);
             $("#resultsModal").modal("toggle");
           });
+  */       
+         
         } else {
           alert("Please fill out all fields before submitting!");
         }
         return false;
       });
+
     </script>
   </body>
 </html>
