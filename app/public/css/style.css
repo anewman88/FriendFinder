@@ -1,11 +1,4 @@
-.jumbotron {
-  background: #929292;
-}
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 .body {
   background: #e4ebf1;
 }
@@ -16,7 +9,47 @@ hr {
 .Mntitle {
   color: white;
 }
+
+/*
 #resultsModal img {
   overflow: hidden;
-  width: 500px;
+  width: 900px;
+}
+*/
+#userImg, 
+#matchImg {
+   width: 200;
+}
+
+/* Survey - Custom radio buttons */
+
+/*
+.radio-inline {
+  margin-left: 17px; 
+  width: 75px;
+}
+*/
+
+.radio-inline {
+  text-align: center; 
+  width: 80px;
+}
+
+.button-heading {
+    text-align: center;
+    font-size: 12px;
+}
+
+.survey-list {
+    text-align: center;
+    font-size: 12px;
+}
+
+.odd-question {
+    background-color:lavender;
+    line-height: 18px;
+}
+.even-question {
+    background-color:rgb(170, 170, 173);
+    line-height: 18px;
 }

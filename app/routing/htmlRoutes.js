@@ -1,9 +1,10 @@
 // Dependencies
 // =============================================================
-var path = require('path');
+var path = require("path");
 
 // Routes
 // =============================================================
+// Homework Requirement: 
 // Your `htmlRoutes.js` file should include two routes:
 //
 //    * A GET Route to `/survey` which should display the survey page.
@@ -11,11 +12,12 @@ var path = require('path');
 
 // Export API routes
 module.exports = function(app) {
+
     app.get('/survey', function(req, res) {
         res.sendFile(path.join(__dirname, '../public/survey.html'));
     });
     
-    app.get('/', function(req, res) {
+    app.get(function(req, res) {
         res.sendFile(path.join(__dirname, '../public/home.html'));
     });
     
