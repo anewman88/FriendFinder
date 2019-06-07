@@ -1,10 +1,12 @@
 // Dependencies
 // =============================================================
 var path = require("path");
+var debugON = true;
 
 // Import the list of friend entries
 // Using a js list of objects instead of a database 
-var friendList = require('../data/friends.js');
+var friendList = require("../data/friends.js");
+if (debugON) console.log ("Loaded apiRoutes.js - friendList ", friendList );
 
 // Routes
 // =============================================================
@@ -18,13 +20,16 @@ var friendList = require('../data/friends.js');
 
 // Export API routes
 module.exports = function(app) {
-
+    
+    // Return the friendsList in simple JSON format
     app.get("/api/friends", function(request, result) {
+        if (debugON) console.log ("in get /api/friends", friendList);
         return result.json(friendList);
     });  // app.get("/api/friends"...
     
     // Create/post New Friend entry - takes in JSON input
     app.post("/api/friends", function(request, result) {
+        if (debugON) console.log ("in post /api/friends", request.body);
 
         // request.body hosts is equal to the JSON post sent from the user
         // This works because of the body parsing middleware
@@ -33,13 +38,13 @@ module.exports = function(app) {
         
         // Temp store new friend input 
         var newFriend = {
-            name: req.body.name,
-            photo: req.body.photo,
+            name: request.body.name,
+            photo: request.body.photo,
             scores: []
         };
         // Convert scores from string to integer data (AJAX post seemed to make the numbers strings)
         newFriend.scores = newScores.map(Number);
-        console.log(newFriend);
+        if (debugON) console.log("New Friend ", newFriend);
 
         // Determine the best match
         
@@ -50,12 +55,12 @@ module.exports = function(app) {
         // wait to push the new user data before finding the best match otherwise
         // the best match will be the newly input friend.
         friendList.push(newFriend);
-       
+        if (debugON) console.log ("just pushed new friend ", newFriend);
         //  For now return the new friend data
-        res.json(newFriend);
+        result.json(newFriend);
 
         //  Return the best match data
-        //res.json(bestMatch);
+        //result.json(bestMatch);
 
         
     });  //  app.post("/api/friends"...

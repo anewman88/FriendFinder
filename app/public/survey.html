@@ -9,8 +9,61 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../public/css/style.css" />
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  </head>
   <body>
+<!--*****************************************************************-->    
+<style>
+.body {
+  background: #e4ebf1;
+}
+hr {
+  border-color: inherit;
+  margin: 1em 0;
+}
+
+#userImg, 
+#matchImg {
+   width: 200;
+}
+
+/* Survey - Custom radio buttons */
+
+/*
+.radio-inline {
+  margin-left: 17px; 
+  width: 75px;
+}
+*/
+
+.radio-inline {
+  text-align: center; 
+  width: 80px;
+}
+
+.button-heading {
+    text-align: center;
+    font-size: 12px;
+}
+
+.survey-list {
+    text-align: center;
+    font-size: 12px;
+}
+
+.odd-question {
+    background-color:lavender;
+    line-height: 18px;
+}
+.even-question {
+    background-color:rgb(170, 170, 173);
+    line-height: 18px;
+}
+</style>
+<!--*****************************************************************-->    
+
     <div class="container" id="surveyPage">
 
       <!-- Page Heading -->
@@ -215,8 +268,8 @@
       <footer class="footer text-center">
         <div class="container">
           <p>
-            <a href="#">Home</a> |
-            <a href="">GitHub Repo</a>
+            <a href="/">Home</a> |
+            <a href="#">GitHub Repo</a>
             <br />
           </p>
         </div>
@@ -239,13 +292,14 @@
               <div class="row even-question">
                   <div class="col-lg-6" >
                       <h2 id="userName"></h2>
-                      <img id="userImg"
+                      <img id="userImg" style="width:200px"
                         src="https://via.placeholder.com/200x200"
                         alt="Placeholder image in case user pic doesn't show"/>
+
                   </div>
                   <div class="col-lg-6" >
                       <h2 id="matchName"></h2>
-                      <img id="matchImg"
+                      <img id="matchImg" style="width:200px"
                         src="https://via.placeholder.com/200x200"
                         alt="Placeholder image in case user pic doesn't show"/>
                   </div>
@@ -311,14 +365,14 @@
           if (debugON) console.log ("after call validateForm() data is valid ", userData);
      
           var currentURL = window.location.origin;
+/*
           $("#resultsModal").modal("toggle");  // pop up the modal
           $("#userName").text(userData.name);
-//          $("#userImg").attr("src", userData.photo);
+          $("#userImg").attr("src", userData.photo);
           $("#matchName").text(userData.name);
-//          $("#matchImg").attr("src", userData.photo);
+          $("#matchImg").attr("src", userData.photo);
+*/
 
-
-/*
           // Add/post the input new user data to the friend list  
           // and receive back the best match for the new user
           $.post(currentURL + "/api/friends", userData, function(matchData) {
@@ -329,8 +383,7 @@
 
             // User modal to display the matching pair
             $("#resultsModal").modal("toggle");  
-          });
-*/    
+          });   
          
         } else {
           alert("Please fill out all fields before submitting!");
