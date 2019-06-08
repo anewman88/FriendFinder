@@ -22,6 +22,30 @@ The following packages are needed (npm install 'pkg name') to run the app
 
    * [Path](https://www.npmjs.com/package/path)
 
+### App File Structure
+
+The overall file structure for the app is as follows:
+
+  ```
+  FriendFinder
+    - .gitignore
+    - app
+      - data
+        - friends.js
+      - public
+        - home.html
+        - survey.html
+        - css
+          - style.css
+      - routing
+        - apiRoutes.js
+        - htmlRoutes.js
+    - node_modules
+    - package.json
+    - server.js
+  ```
+
+
 ## Instructions for Starting the App 
 
 There are two ways to start/run the app
