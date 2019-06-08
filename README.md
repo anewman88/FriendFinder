@@ -11,7 +11,7 @@ The purpose of this assignment is to build a compatibility-based "FriendFinder" 
 
 A model for the app can be found here: [this demo version of the site](https://friend-finder-fsf.herokuapp.com/).  I made a few deviations from the sample model, but the functionality is the same.
 
-My working app can be found on Heroku [here](https://friend-finder-express.herokuapp.com/)
+My working app can be found on Heroku [here](https://shrouded-beyond-64964.herokuapp.com/)
 
 ### Node Packages Used
 The following packages are needed (npm install 'pkg name') to run the app
@@ -38,7 +38,7 @@ There are two ways to start/run the app
 
 ### Running the app on your computer from Heroku
 
-* The working app can be found on Heroku [here](https://friend-finder-express.herokuapp.com/)
+* The working app can be found on Heroku [here](https://shrouded-beyond-64964.herokuapp.com/)
 
 ## Instructions for Using the App
 
