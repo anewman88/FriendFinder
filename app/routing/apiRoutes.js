@@ -1,7 +1,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
-var debugON = true;
+var debugON = false;
 
 // Import the list of friend entries
 // Using a js list of objects instead of a database 

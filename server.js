@@ -26,4 +26,5 @@ require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 app.listen(PORT, function() {
 	// Log (server-side) when our server has started
 	console.log("App FriendFinder Server listening on: http://localhost:" + PORT);
+    console.log ("__dirname: ",__dirname)
 });
